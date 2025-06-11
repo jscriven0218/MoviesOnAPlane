@@ -17,6 +17,8 @@ In a first step to make good recommendations, we remove any movie that has less 
 
 ![RatingDist](https://github.com/user-attachments/assets/9f3d2221-dd7b-4bad-8f0a-998f78e5d9e6)
 
+![NormalizedRatingDist](https://github.com/user-attachments/assets/c5954dc3-aed2-40a7-867b-2733679b2c21)
+
 ## Modeling
 To model the recommendations, singular value decomposition (SVD) is a collaborative filtering which is the process of making recommendations based on the preferences of other similar users.  We utilize SVD by creating a matrix of rows representing each user and columns for each movie - with ratings, if reviewed, in the matrix.  We train our model on 70% of our total dataset.
 
