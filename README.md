@@ -20,6 +20,15 @@ In a first step to make good recommendations, we remove any movie that has less 
 ## Modeling
 To model the recommendations, singular value decomposition (SVD) is a collaborative filtering which is the process of making recommendations based on the preferences of other similar users.  We utilize SVD by creating a matrix of rows representing each user and columns for each movie - with ratings, if reviewed, in the matrix.  We train our model on 70% of our total dataset.
 
+Top recommendations for user 256:
+- Star Wars: Episode V - The Empire Strikes Back (1980) (Estimated rating: 4.66)
+- Silence of the Lambs, The (1991) (Estimated rating: 4.50)
+- Desperado (1995) (Estimated rating: 4.16)
+- Speed (1994) (Estimated rating: 4.03)
+- Independence Day (a.k.a. ID4) (1996) (Estimated rating: 3.90)
+
+
+
 ## Evaluation
 
 After fitting the model to our training dataset, we run the model with our testing dataset.  Those predicitons are compared to the actual testing dataset.  An RMSE of 0.8595 tells us that for a predicted rating, the real rating for that user and that movie, is within .8595.  While this is close to a point, it is generally considered a good score on a 5 point rating system.  Therfore, our model is a good predictor of ratings.
