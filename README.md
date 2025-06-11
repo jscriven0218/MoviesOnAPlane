@@ -8,7 +8,7 @@ Here at ABC Airlines we are happy to provide the perk of movies in air during ou
 
 ## Data Understanding
 
-Data provided by MovieLens, a movie recommendation service, provides us with an individuals userID, list of seen movies and a user-specific rating for each of those movies.  This data is provided for all 610 passengers on our flight.
+Data provided by [MovieLens](https://grouplens.org/datasets/movielens/latest/), a movie recommendation service, provides us with an individuals userID, list of seen movies and a user-specific rating for each of those movies.  This data is provided for all 610 passengers on our flight.
 
 Each movie is rated on a 5-star scale.  The total rated movies amongst the 610 passengers is nearly 10,000 movies.
 
