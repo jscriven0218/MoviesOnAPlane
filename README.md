@@ -1,4 +1,4 @@
-# Movies on a Plan
+# Movies on a Plane
 Analysis by Jordan Scriven  
 
 ## Business Understanding
