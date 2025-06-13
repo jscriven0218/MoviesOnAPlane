@@ -20,11 +20,15 @@ In a first step to make good recommendations, we remove any movie that has less 
 ![NormalizedRatingDist](https://github.com/user-attachments/assets/c5954dc3-aed2-40a7-867b-2733679b2c21)
 
 ## Modeling
-To model the recommendations, singular value decomposition (SVD) is a collaborative filtering which is the process of making recommendations based on the preferences of other similar users.  We utilize SVD by creating a matrix of rows representing each user and columns for each movie - with ratings, if reviewed, in the matrix.  We train our model on 70% of our total dataset.
+To model the recommendations, singular value decomposition (SVD) is a collaborative filtering which is the process of making recommendations based on the preferences of other similar users. We utilize SVD by creating a matrix of rows representing each user and columns for each movie - with ratings, if reviewed, in the matrix. Using GridSearchCV, we tuned the parameters of the SVD model to confirm we were using the best model. We train our model on 70% of our total dataset.
 
 ## Evaluation
 
-After fitting the model to our training dataset, we run the model with our testing dataset.  Those predicitons are compared to the actual testing dataset.  An RMSE of 0.8606 tells us that for a predicted rating, the real rating for that user and that movie, is within .8606.  While this is close to a full point, it is generally considered a good score on a 5 point rating system.  Therfore, our model is a good predictor of ratings.
+After fitting the model to our training dataset, we run the model with our testing dataset.  Those predictions are compared to the actual testing dataset.  An RMSE of 0.8595 tells us that for a predicted rating, the real rating for that user and that movie, is within .8595.  While this is close to a point, it is generally considered a good score on a 5 point rating system.  Therfore, our model is a good predictor of ratings.
+
+The SVD model we ran with the best parameters as decided with the GridSearchCV model, dropped that RMSE to .8381.
+
+While RMSE is a good predictor of the model, we also used a Normalized Cumulative Gain (NDCG) score to evaluate the SVD model.  The NDCG of .988 is very high and means that the recommendations provided to the passengers are a very good fit.
 
 Using those predicted ratings, we rank the unwatched movies per user. The first top 5 recommended movies, that are also in the set of 1,500 that we have narrowed our library down to, are recommended to the user.
 
